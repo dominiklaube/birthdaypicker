@@ -56,31 +56,31 @@
       if (settings["dateFormat"] == "bigEndian") {
         $fieldset.append($year).append($month).append($day);
         if (tabindex != null) {
-          $year.attr('tabindex', tabindex);
-          $month.attr('tabindex', tabindex++);
-          $day.attr('tabindex', tabindex++);
+          $year.wrap('<div class="f-year"></div>').attr('tabindex', tabindex);
+          $month.wrap('<div class="f-month"></div>').attr('tabindex', tabindex++);
+          $day.wrap('<div class="f-day"></div>').attr('tabindex', tabindex++);
         }
       } else if (settings["dateFormat"] == "littleEndian") {
         $fieldset.append($day).append($month).append($year);
         if (tabindex != null) {
-          $day.attr('tabindex', tabindex);
-          $month.attr('tabindex', tabindex++);
-          $year.attr('tabindex', tabindex++);
+          $day.wrap('<div class="f-day"></div>').attr('tabindex', tabindex);
+          $month.wrap('<div class="f-month"></div>').attr('tabindex', tabindex++);
+          $year.wrap('<div class="f-year"></div>').attr('tabindex', tabindex++);
         }
       } else {
         $fieldset.append($month).append($day).append($year);
         if (tabindex != null) {
-          $month.attr('tabindex', tabindex);
-          $day.attr('tabindex', tabindex++);
-          $year.attr('tabindex', tabindex++);
+          $month.wrap('<div class="f-month"></div>').attr('tabindex', tabindex);
+          $day.wrap('<div class="f-day"></div>').attr('tabindex', tabindex++);
+          $year.wrap('<div class="f-year"></div>').attr('tabindex', tabindex++);
         }
       }
 
       // Add the option placeholders if specified
       if (settings["placeholder"]) {
-        $("<option value='0'>Year:</option>").appendTo($year);
-        $("<option value='0'>Month:</option>").appendTo($month);
-        $("<option value='0'>Day:</option>").appendTo($day);
+        $("<option value=''>Jahr</option>").appendTo($year);
+        $("<option value=''>Monat</option>").appendTo($month);
+        $("<option value=''>Tag</option>").appendTo($day);
       }
 
       var hiddenDate;
