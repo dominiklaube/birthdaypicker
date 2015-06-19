@@ -56,25 +56,29 @@
       if (settings["dateFormat"] == "bigEndian") {
         $fieldset.append($year).append($month).append($day);
         if (tabindex != null) {
-          $year.wrap('<div class="f-year"></div>').attr('tabindex', tabindex);
-          $month.wrap('<div class="f-month"></div>').attr('tabindex', tabindex++);
-          $day.wrap('<div class="f-day"></div>').attr('tabindex', tabindex++);
+          $year.attr('tabindex', tabindex);
+          $month.attr('tabindex', tabindex++);
+          $day.attr('tabindex', tabindex++);
         }
       } else if (settings["dateFormat"] == "littleEndian") {
         $fieldset.append($day).append($month).append($year);
         if (tabindex != null) {
-          $day.wrap('<div class="f-day"></div>').attr('tabindex', tabindex);
-          $month.wrap('<div class="f-month"></div>').attr('tabindex', tabindex++);
-          $year.wrap('<div class="f-year"></div>').attr('tabindex', tabindex++);
+          $day.attr('tabindex', tabindex);
+          $month.attr('tabindex', tabindex++);
+          $year.attr('tabindex', tabindex++);
         }
       } else {
         $fieldset.append($month).append($day).append($year);
         if (tabindex != null) {
-          $month.wrap('<div class="f-month"></div>').attr('tabindex', tabindex);
-          $day.wrap('<div class="f-day"></div>').attr('tabindex', tabindex++);
-          $year.wrap('<div class="f-year"></div>').attr('tabindex', tabindex++);
+          $month.attr('tabindex', tabindex);
+          $day.attr('tabindex', tabindex++);
+          $year.attr('tabindex', tabindex++);
         }
       }
+
+      $year.wrap('<div class="f-year"></div>');
+      $month.wrap('<div class="f-month"></div>');
+      $day.wrap('<div class="f-day"></div>');
 
       // Add the option placeholders if specified
       if (settings["placeholder"]) {
