@@ -11,8 +11,8 @@
 
   // plugin variables
   var months = {
-    "short": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    "long": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] },
+    "short": ["Jan", "Febr", "März", "Apr", "Mai", "Juni", "Juli", "Aug", "Sept", "Okt", "Nov", "Dez"],
+    "long": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"] },
       todayDate = new Date(),
       todayYear = todayDate.getFullYear(),
       todayMonth = todayDate.getMonth() + 1,
@@ -31,8 +31,8 @@
       "placeholder"   : true,
       "legend"        : "",
       "defaultDate"   : false,
-      "fieldName"     : "birthdate",
-      "fieldId"       : "birthdate",
+      "fieldName"     : "birthday",
+      "fieldId"       : "birthday",
       "hiddenDate"    : true,
       "onChange"      : null,
       "tabindex"      : null
